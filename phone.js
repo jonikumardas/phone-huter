@@ -53,3 +53,33 @@ const datailsvalue = phones => {
       .then(res => res.json())
       .then(data => AboutDetails(data.data));
 }
+// functon for second data meansa details data append 
+const AboutDetails = data => {
+    const details = document.getElementById("details");
+    // text content clear 
+    details.textContent = "";
+    const div = document.createElement("div")
+    div.classList.add("col");
+    div.style.width = "100%";
+    div.style.marginLeft = "13%";
+    div.innerHTML = `
+    <div class="card mt-2" style="width: 75%;">
+    <img class="w-50 mt-3 mx-auto" src="${data.image}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Name: ${data.name}</h5>
+      <p class="card-text"> <h4 class="text-info">Details..</h4>
+      <h5>Brand:</h5> ${data.brand} <br> 
+      <h5>Display:</h5> ${data.mainFeatures.displaySize} <br>
+      <h5>MainFeatures:</h5>${data.mainFeatures.memory}
+       </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"> <h5>Others:</h5> ${data.others.Bluetooth,data.others.GPS, data.others.USB,data.others.WLAN}</li>
+      <li class="list-group-item"><h5>Slug:</h5>${data.slug}</li>
+      <li class="list-group-item"><h5>Release Date:</h5>${data.releaseDate} <li>
+    </ul>
+    `;
+    details.appendChild(div);
+    
+  }
+  // assignment has end 
