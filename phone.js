@@ -45,3 +45,11 @@ const displaydata = phones => {
       });
     }
 }
+// datails show here 
+const datailsvalue = phones => {
+    // lood data 
+    const details = `https://openapi.programming-hero.com/api/phone/${phones}`;
+    fetch(details)
+      .then(res => res.json())
+      .then(data => AboutDetails(data.data));
+}
