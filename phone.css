@@ -1,0 +1,23 @@
+body {
+    background-color: rgba(138, 246, 246, 0.609);
+}
+
+#error-massage1 {
+    display: none;
+    font-weight: 600;
+    width: 320px;
+    background-color: azure;
+    border: 1px solid rgb(192, 190, 190);
+    position: relative;
+    left: 35%;
+}
+
+#error-massage2 {
+    display: none;
+    width: 320px;
+    font-weight: 600;
+    background-color: azure;
+    border: 1px solid rgb(192, 190, 190);
+    position: relative;
+    left: 35%;
+}
